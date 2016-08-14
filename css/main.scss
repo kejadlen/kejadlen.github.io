@@ -2,3 +2,15 @@
 ---
 @import "bourbon/bourbon";
 @import "base/base";
+
+body {
+  width: 87.5%;
+  max-width: 1400px;
+  padding-left: 12.5%;
+};
+
+header {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+

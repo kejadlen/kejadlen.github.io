@@ -1,0 +1,9 @@
+[submodule "vendor/normalize.css.git"]
+	path = vendor/normalize.css
+	url = git@github.com:necolas/normalize.css.git
+[submodule "vendor/bourbon"]
+	path = vendor/bourbon
+	url = git@github.com:thoughtbot/bourbon.git
+[submodule "vendor/bitters"]
+	path = vendor/bitters
+	url = git@github.com:thoughtbot/bitters.git
