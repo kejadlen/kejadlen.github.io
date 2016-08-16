@@ -3,13 +3,13 @@
 @import "normalize";
 
 @import "bourbon/bourbon";
-@import "base/base";
 
-$visual-grid: false !default;
+// $visual-grid: true !default;
 $grid-columns: 8 !default;
 @import "neat/neat";
 
-@import "solarized";
+@import "base/base";
+
 @import "highlight";
 
 @for $i from 1 through 6 {
@@ -17,20 +17,22 @@ $grid-columns: 8 !default;
 }
 
 body {
-  @include span-columns(6);
+  @include span-columns(5);
   @include shift(1);
-  background-color: $base3;
-  color: $base03;
+  @include omega();
 };
 
 header {
   margin-top: modular-scale(4);
-  margin-bottom: modular-scale(1);
 }
 
-pre {
-  padding: modular-scale(-1);
+article {
+  h1 { font-size: modular-scale(2); }
+  pre {
+    padding: modular-scale(-1);
+  }
 }
 
-a, a:active, code.url { color: $blue; }
-a:visited { color: $violet; }
+nav {
+    @include span-columns(8);
+}
