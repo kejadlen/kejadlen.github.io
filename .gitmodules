@@ -7,3 +7,6 @@
 [submodule "vendor/bitters"]
 	path = vendor/bitters
 	url = https://github.com/thoughtbot/bitters.git
+[submodule "vendor/neat"]
+	path = vendor/neat
+	url = https://github.com/thoughtbot/neat.git
