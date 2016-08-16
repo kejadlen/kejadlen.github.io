@@ -1,16 +1,53 @@
 ---
 ---
+@import "normalize";
+
 @import "bourbon/bourbon";
 @import "base/base";
 
+$visual-grid: false !default;
+$grid-columns: 8 !default;
+@import "neat/neat";
+
+@import "highlight";
+
+// Solarized
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+@for $i from 1 through 6 {
+  h#{$i} { font-size: modular-scale(6 - $i); }
+}
+
 body {
-  width: 87.5%;
-  max-width: 1400px;
-  padding-left: 12.5%;
+  @include span-columns(6);
+  @include shift(1);
+  background-color: $base3;
+  color: $base03;
 };
 
 header {
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
+  margin-top: modular-scale(4);
+  margin-bottom: modular-scale(1);
 }
 
+pre {
+  padding: modular-scale(-1);
+}
+
+a, a:active, code.url { color: $blue; }
+a:visited { color: $violet; }
