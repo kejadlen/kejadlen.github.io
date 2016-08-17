@@ -8,29 +8,15 @@
 $grid-columns: 8 !default;
 @import "neat/neat";
 
-@import "solarized";
-
 @import "reset";
+
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+@import "layout";
+
+@import "solarized";
 @import "typography";
 @import "highlight";
-
-body {
-  @include span-columns(5);
-  @include shift(1);
-  @include omega();
-};
-
-header {
-  margin-top: modular-scale(4);
-}
-
-article {
-  h1 { font-size: modular-scale(2); }
-  pre {
-    padding: $small-spacing;
-  }
-}
-
-nav {
-    @include span-columns(8);
-}
