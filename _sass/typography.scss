@@ -1,0 +1,51 @@
+@import "solarized";
+
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+body {
+  color: $base03;
+  font-family: $font-stack-system;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color 150ms ease;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($blue, 25%);
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base2;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} { font-size: modular-scale(6 - $i); }
+}
+

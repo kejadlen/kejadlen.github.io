@@ -8,13 +8,11 @@
 $grid-columns: 8 !default;
 @import "neat/neat";
 
-@import "base/base";
+@import "solarized";
 
+@import "reset";
+@import "typography";
 @import "highlight";
-
-@for $i from 1 through 6 {
-  h#{$i} { font-size: modular-scale(6 - $i); }
-}
 
 body {
   @include span-columns(5);
@@ -29,7 +27,7 @@ header {
 article {
   h1 { font-size: modular-scale(2); }
   pre {
-    padding: modular-scale(-1);
+    padding: $small-spacing;
   }
 }
 
