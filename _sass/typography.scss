@@ -30,15 +30,6 @@ a {
   }
 }
 
-hr {
-  border-bottom: 1px solid $base2;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
-}
-
 @for $i from 1 through 6 {
   h#{$i} { font-size: modular-scale(6 - $i); }
 }
-

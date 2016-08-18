@@ -20,3 +20,10 @@ $small-spacing: $base-spacing / 2;
 @import "solarized";
 @import "typography";
 @import "highlight";
+
+article {
+  header {
+    h1 { margin-bottom: 0; }
+    p.subtitle { font-style: italic; }
+  }
+}
