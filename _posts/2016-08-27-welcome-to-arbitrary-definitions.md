@@ -42,7 +42,7 @@ Although many people seem to shy away from `git` submodules, I find that it's
 a powerful tool that I turn to surprisingly often. While it is easy to really
 screw yourself over, a few ground rules and discipline make it quite rare.
 Admittedly, `git` is a tool that I've sharpened over the years, so I'm quite
-comfortable with it's edges, but a tool that's well worth honing.
+comfortable with it's edges, but it's a tool that's well worth honing.
 
 [kejadlen.github.io]: https://github.com/kejadlen/kejadlen.github.io
 [GitHub Pages]: https://pages.github.com/
