@@ -38,6 +38,12 @@ changes (which shouldn't be necessary for this project), I don't need to jump
 through hoops and can just update the files directly and then commit/push from
 the submodule.
 
+Although many people seem to shy away from `git` submodules, I find that it's
+a powerful tool that I turn to surprisingly often. While it is easy to really
+screw yourself over, a few ground rules and discipline make it quite rare.
+Admittedly, `git` is a tool that I've sharpened over the years, so I'm quite
+comfortable with it's edges, but a tool that's well worth honing.
+
 [kejadlen.github.io]: https://github.com/kejadlen/kejadlen.github.io
 [GitHub Pages]: https://pages.github.com/
 [nanoc]: http://nanoc.ws/
