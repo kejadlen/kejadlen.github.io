@@ -27,3 +27,10 @@ article {
     p.subtitle { font-style: italic; }
   }
 }
+
+nav {
+  li {
+    list-style-type: none;
+    margin: 0;
+  }
+}
