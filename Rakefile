@@ -1,5 +1,7 @@
 desc 'Publish a draft'
 task :publish, [:draft] do |t, args|
+  require 'date'
+
   drafts = FileList.new(File.join('_drafts', "*#{args[:draft]}*"))
   abort '' if drafts.empty?
   abort <<-ABORT if drafts.size > 1
