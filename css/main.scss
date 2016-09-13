@@ -26,6 +26,13 @@ article {
     h1 { margin-bottom: 0; }
     p.subtitle { font-style: italic; }
   }
+    img {
+      display: block;
+      margin: 0 auto;
+      padding: 1em;
+      max-width: 100%;
+      width: 67%;
+    }
 }
 
 nav {
