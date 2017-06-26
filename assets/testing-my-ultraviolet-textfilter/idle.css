@@ -1,0 +1,77 @@
+/* line 3, ../../sass/ultraviolet/idle.scss */
+pre.idle .TypeName {
+  color: #21439C;
+}
+
+/* line 8, ../../sass/ultraviolet/idle.scss */
+pre.idle .LibraryVariable {
+  color: #A535AE;
+}
+
+/* line 11, ../../sass/ultraviolet/idle.scss */
+pre.idle .Storage {
+  color: #FF5600;
+}
+
+/* line 14, ../../sass/ultraviolet/idle.scss */
+pre.idle .line-numbers {
+  background-color: #BAD6FD;
+  color: #000000;
+}
+
+/* line 18, ../../sass/ultraviolet/idle.scss */
+pre.idle {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* line 22, ../../sass/ultraviolet/idle.scss */
+pre.idle .StringInterpolation {
+  color: #990000;
+}
+
+/* line 27, ../../sass/ultraviolet/idle.scss */
+pre.idle .LibraryConstant {
+  color: #A535AE;
+}
+
+/* line 32, ../../sass/ultraviolet/idle.scss */
+pre.idle .BuiltInConstant {
+  color: #A535AE;
+}
+
+/* line 35, ../../sass/ultraviolet/idle.scss */
+pre.idle .Invalid {
+  background-color: #990000;
+  color: #FFFFFF;
+}
+
+/* line 39, ../../sass/ultraviolet/idle.scss */
+pre.idle .LibraryClassType {
+  color: #A535AE;
+}
+
+/* line 42, ../../sass/ultraviolet/idle.scss */
+pre.idle .LibraryFunction {
+  color: #A535AE;
+}
+
+/* line 47, ../../sass/ultraviolet/idle.scss */
+pre.idle .Keyword {
+  color: #FF5600;
+}
+
+/* line 52, ../../sass/ultraviolet/idle.scss */
+pre.idle .String {
+  color: #00A33F;
+}
+
+/* line 55, ../../sass/ultraviolet/idle.scss */
+pre.idle .FunctionName {
+  color: #21439C;
+}
+
+/* line 60, ../../sass/ultraviolet/idle.scss */
+pre.idle .Comment {
+  color: #919191;
+}

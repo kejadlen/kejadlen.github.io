@@ -1,3 +1,3 @@
-{% capture image_path %}{{ page.title | slugify }}/{{ include.name }}{% endcapture %}
+{% capture image_path %}/assets/{{ page.title | slugify }}/{{ include.name }}{% endcapture %}
 
-<img src="/images/{{ image_path }}" alt="{{ include.alt }}" />
+<img src="{{ image_path | link }}" alt="{{ include.alt }}" />

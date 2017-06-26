@@ -1,6 +1,5 @@
 ---
 title: Welcome to Arbitrary Definitions!
-subtitle: a new beginning?
 ---
 It's been a while since I've had a website, so I buckled down this past week
 and threw [this][kejadlen.github.io] together.

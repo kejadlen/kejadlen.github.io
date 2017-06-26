@@ -1,6 +1,5 @@
 ---
 title: Reflections on Pandemic Legacy
-subtitle: there will be spoilers... eventually
 ---
 
 My coworkers and I just wrapped up [Pandemic Legacy][pl] after about a year. We
