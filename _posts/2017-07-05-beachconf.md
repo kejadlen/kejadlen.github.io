@@ -23,8 +23,12 @@ log of what I'm doing on the beach.
   Apple steadily improving in this area.
   - Both designers and devs are going to have to adjust to constraints based on
     baselines instead of the space between labels.
+- Poked around at [my implementation][kilo-rs] of [Build Your Own Text
+  Editor][text-editor].
 
 [212]: https://developer.apple.com/wwdc17/212
 [codable]: https://developer.apple.com/documentation/swift/codable
 [lament]: https://www.maa.org/sites/default/files/pdf/devlin/LockhartsLament.pdf
 [245]: https://developer.apple.com/wwdc2017/245
+[kilo-rs]: https://github.com/kejadlen/kilo-rs
+[text-editor]: http://viewsourcecode.org/snaptoken/kilo/index.html
