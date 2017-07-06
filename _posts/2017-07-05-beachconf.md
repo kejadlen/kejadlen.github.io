@@ -26,9 +26,28 @@ log of what I'm doing on the beach.
 - Poked around at [my implementation][kilo-rs] of [Build Your Own Text
   Editor][text-editor].
 
-[212]: https://developer.apple.com/wwdc17/212
+[212]: https://developer.apple.com/videos/play/wwdc17/212
 [codable]: https://developer.apple.com/documentation/swift/codable
 [lament]: https://www.maa.org/sites/default/files/pdf/devlin/LockhartsLament.pdf
-[245]: https://developer.apple.com/wwdc2017/245
+[245]: https://developer.apple.com/videos/play/wwdc2017/245
 [kilo-rs]: https://github.com/kejadlen/kilo-rs
 [text-editor]: http://viewsourcecode.org/snaptoken/kilo/index.html
+
+### July 6
+
+- Poked around a bit more with [kilo.rs][kilo-rs]. Realized that I need to
+  handle `STDIN` differently, so I'm going to let that simmer in my
+  subconscious for a bit before continuing.
+- Watched [Life After Nil][life-after-nil]. Mostly skimmed through this talk
+  about applying concepts learned from Haskell to Ruby. Not much new to me
+  here, but validating to see that I've reached similar conclusions as other
+  people.
+- Watched [Auto Layout Techniques in Interface Builder][412]. Learned a few
+  neat tricks in this talk. I like how hard Apple's pushing Dynamic Type across
+  their WWDC presentations. From my anecdotal experience, I've seen a number of
+  people on the bus using that accessibility feature.
+- Wrote [a blog post on encrypting stuff in git][encrypting-stuff-in-git].
+
+[life-after-nil]: https://vimeo.com/200077718
+[412]: https://developer.apple.com/videos/play/wwdc2017/412/
+[encrypting-stuff-in-git]: {{ site.baseurl }}{% post_url 2017-07-06-encrypting-stuff-in-git %}
