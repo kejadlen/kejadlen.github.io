@@ -47,7 +47,13 @@ log of what I'm doing on the beach.
   their WWDC presentations. From my anecdotal experience, I've seen a number of
   people on the bus using that accessibility feature.
 - Wrote [a blog post on encrypting stuff in git][encrypting-stuff-in-git].
+- Read (skimmed) [Can Programming Be Liberated from the von Neumann Style? A
+  Functional Style and Its Algebra of Programs][backus-turing]. Basically
+  Backus complaining about "von Neumann style" programming languages.
+  Interesting how not much seems to have changed in this regard since he wrote
+  this in 1978.
 
 [life-after-nil]: https://vimeo.com/200077718
 [412]: https://developer.apple.com/videos/play/wwdc2017/412/
 [encrypting-stuff-in-git]: {{ site.baseurl }}{% post_url 2017-07-06-encrypting-stuff-in-git %}
+[backus-turing]: http://www.thocp.net/biographies/papers/backus_turingaward_lecture.pdf
