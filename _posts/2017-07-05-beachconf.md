@@ -52,8 +52,12 @@ log of what I'm doing on the beach.
   Backus complaining about "von Neumann style" programming languages.
   Interesting how not much seems to have changed in this regard since he wrote
   this in 1978.
+- Read [An Experiment in Software Prototyping Productivity][haskell-prototype].
+  Some interesting findings, even keeping in mind the authorial bias for
+  Haskell.
 
 [life-after-nil]: https://vimeo.com/200077718
 [412]: https://developer.apple.com/videos/play/wwdc2017/412/
 [encrypting-stuff-in-git]: {{ site.baseurl }}{% post_url 2017-07-06-encrypting-stuff-in-git %}
 [backus-turing]: http://www.thocp.net/biographies/papers/backus_turingaward_lecture.pdf
+[haskell-prototype]: http://haskell.cs.yale.edu/?post_type=publication&p=366
