@@ -1,5 +1,7 @@
 # incremental: true
 
+title: Arbitrary Definitions
+
 defaults:
   - scope:
       path: "" # all files
@@ -10,3 +12,6 @@ defaults:
       type: posts
     values:
       layout: post
+
+gems:
+  - jekyll-feed

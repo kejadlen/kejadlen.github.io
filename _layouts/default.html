@@ -4,6 +4,8 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" title="Arbitrary Definitions JSON Feed" type="application/json" href="{{ site.url }}{% link feed.json %}" />
+    {% feed_meta %}
     <style type="text/css">
 body { padding-left: 12.5%; font-size: 1.2rem; line-height: 1.7rem; }
 article { width: 55%; }
