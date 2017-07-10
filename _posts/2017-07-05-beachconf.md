@@ -11,16 +11,18 @@ log of what I'm doing on the beach.
 
 ### July 5
 
-- Watched [What's New in Foundation][212]. This wasn't too informative; some
-  nice improvements with Objective-C interop with `String`/`Range` and
-  copy-on-write, but I don't use key paths or KVO a lot, so that was not as
-  interesting. The addition of [Codable][codable] is greatly welcomed, though.
-- Read [A Mathematician's Lament][lament]. While I agree pretty much completely
-  with the overall point, I did think it was overly harsh on math teachers.
-- Watched [Building Apps with Dynamic Type][245]. I've always been impressed by
-  Apple's accessibility support as a developer (I do use a handful of
-  accessibility features on iOS, but not Dynamic Type), and it's cool to see
-  Apple steadily improving in this area.
+- [What's New in Foundation][212] (WWDC)
+  - This wasn't too informative; some nice improvements with Objective-C
+    interop with `String`/`Range` and copy-on-write, but I don't use key paths
+    or KVO a lot, so that was not as interesting. The addition of
+    [Codable][codable] is greatly welcomed, though.
+- [A Mathematician's Lament][lament] (paper)
+  - While I agree pretty much completely with the overall point, I did think it
+    was overly harsh on math teachers.
+- [Building Apps with Dynamic Type][245] (WWDC)
+  - I've always been impressed by Apple's accessibility support as a developer
+    (I do use a handful of accessibility features on iOS, but not Dynamic
+    Type), and it's cool to see Apple steadily improving in this area.
   - Both designers and devs are going to have to adjust to constraints based on
     baselines instead of the space between labels.
 - Poked around at [my implementation][kilo-rs] of [Build Your Own Text
@@ -38,26 +40,65 @@ log of what I'm doing on the beach.
 - Poked around a bit more with [kilo.rs][kilo-rs]. Realized that I need to
   handle `STDIN` differently, so I'm going to let that simmer in my
   subconscious for a bit before continuing.
-- Watched [Life After Nil][life-after-nil]. Mostly skimmed through this talk
-  about applying concepts learned from Haskell to Ruby. Not much new to me
-  here, but validating to see that I've reached similar conclusions as other
-  people.
-- Watched [Auto Layout Techniques in Interface Builder][412]. Learned a few
-  neat tricks in this talk. I like how hard Apple's pushing Dynamic Type across
-  their WWDC presentations. From my anecdotal experience, I've seen a number of
-  people on the bus using that accessibility feature.
+- [Life After Nil][life-after-nil] (video)
+  - Mostly skimmed through this talk about applying concepts learned from
+    Haskell to Ruby. Not much new to me here, but validating to see that I've
+    reached similar conclusions as other people.
+- [Auto Layout Techniques in Interface Builder][412] (WWDC)
+  - Learned a few neat tricks in this talk. I like how hard Apple's pushing
+    Dynamic Type across their WWDC presentations. From my anecdotal experience,
+    I've seen a number of people on the bus using that accessibility feature.
 - Wrote [a blog post on encrypting stuff in git][encrypting-stuff-in-git].
-- Read (skimmed) [Can Programming Be Liberated from the von Neumann Style? A
-  Functional Style and Its Algebra of Programs][backus-turing]. Basically
-  Backus complaining about "von Neumann style" programming languages.
-  Interesting how not much seems to have changed in this regard since he wrote
-  this in 1978.
-- Read [An Experiment in Software Prototyping Productivity][haskell-prototype].
-  Some interesting findings, even keeping in mind the authorial bias for
-  Haskell.
+- [Can Programming Be Liberated from the von Neumann Style? A Functional Style
+  and Its Algebra of Programs][backus-turing] (paper)
+  - Basically Backus complaining about "von Neumann style" programming
+    languages.  Interesting how not much seems to have changed in this regard
+    since he wrote this in 1978.
+- [An Experiment in Software Prototyping Productivity][haskell-prototype]
+  (paper)
+  - Some interesting findings, even keeping in mind the authorial bias for
+    Haskell.
 
 [life-after-nil]: https://vimeo.com/200077718
 [412]: https://developer.apple.com/videos/play/wwdc2017/412/
 [encrypting-stuff-in-git]: {{ site.baseurl }}{% post_url 2017-07-06-encrypting-stuff-in-git %}
 [backus-turing]: http://www.thocp.net/biographies/papers/backus_turingaward_lecture.pdf
 [haskell-prototype]: http://haskell.cs.yale.edu/?post_type=publication&p=366
+
+### July 10
+
+- [Haskell taketh away: limiting side effects for parallel
+  programming][haskell-taketh-away] (video)
+  - GHC's intermediate language (System FC) has just 3 types and 15
+    constructors!
+  - Learned about [Safe Haskell][safe-haskell].
+  - Not imperative vs. functional - really about determinism vs.
+    non-determinism.
+  - In-place parallel sorting inside of a pure function.
+  - Didn't know that Haskell is still actively evolving.
+- [Bartosz Milewski's Category Theory for
+  Programmers][category-theory-for-programmers] (book)
+  - > [T]esting is almost always a probabilistic rather than a deterministic
+    process. Testing is a poor substitute for proof.
+  - The bottom type makes sense to me now on this re-read.
+  - This is starting to realize some of the subjects from prior book clubs:
+    operational and denotational semantics were covered in [Understanding
+    Computation][understanding-computation].
+  - > The initial object is the object that has one and only one morphism going
+    to any object in the category.
+  - *poset*: partially ordered set
+  - `Void` is different from `()`
+  - > The terminal object is the object with one and only one morphism coming
+    to it from any object in the category.
+  - > There is the propositional equality, intensional equality, extensional
+    equality, and equality as a path in homotopy type theory. And then there
+    are the weaker notions of isomorphism, and even weaker of equivalence.
+- [What's New in Signing for Xcode and Xcode Server][xcode-signing]
+  - Figured I should watch this, given how much trouble code signing gave us on
+    my last project.
+
+[haskell-taketh-away]: https://www.youtube.com/watch?v=lC5UWG5N8oY
+[safe-haskell]: https://wiki.haskell.org/Safe_Haskell
+[category-theory-for-programmers]: https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/
+[understanding-computation]: https://www.amazon.com/Understanding-Computation-Machines-Impossible-Programs/dp/1449329276/
+[xcode-signing]: https://developer.apple.com/videos/play/wwdc2017/403/
