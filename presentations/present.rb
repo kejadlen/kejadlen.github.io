@@ -27,7 +27,7 @@ class Slide
 
   def to_a
     increments.each.with_object([content]) {|i, a|
-      a << [a.last, "- #{i}"].join("\n")
+      a << [a.last, i].join("\n")
     }.map {|c|
       Slide.new(content: c, layout: layout, notes: notes)
     }

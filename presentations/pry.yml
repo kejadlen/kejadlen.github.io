@@ -18,57 +18,246 @@
       gem "pry"
     end
     ```
-  notes:
-    - "`pry` is the only gem other than `bundler` that I install globally"
+  notes: |
+    - `pry` is the only gem other than `bundler` that I install globally
+
+- content: '# Running Pry'
+  increments:
+    - '- `require "pry"`'
+    - '- `binding.pry`'
+    - '- `binding.pry if ...`'
+    - '- `bundle console` (`bundle config console pry`)'
+    - |
+      - ```ruby
+        begin
+          require 'pry'
+          Pry.start || exit
+        rescue LoadError
+        end
+        ```
+
+- content: '# Exiting Pry'
+  increments:
+    - '- `exit`'
+    - '- `exit-all`'
+    - '- `exit-program`'
+  notes: |
+    - `exit`: exits current context
+    - `exit-all`: returns to the caller
+    - `exit-program`: exit both Pry and the caller
 
 - content: |
-    # Running Pry
+    # Commands I Use A Lot
+
+    - `;` and `_`
+    - `cd` and `ls`
+    - `?`
+    - `$`
+    - `_ex_` and `wtf?`
+    - `whereami`
+    - `edit`
+
+- content: '# `;` and `_`'
   increments:
-    - '`require "pry"`'
-    - '`binding.pry`'
-    - '`binding.pry if ...`'
-    - '`bundle console` (`bundle config console pry`)'
+    - |
+      ```
+      (main)> 1_000.times.to_a
+      => [0,
+       1,
+       2,
+       3,
+      <...snip...>
+      ```
+    - |
+      ```
+      (main)> 1_000.times.to_a;
+      (main)> foo = _;
+      (main)> foo[0..10]
+      => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      ```
+
+- content: '# `cd` and `ls`'
+  increments:
+    - |
+      ```
+      (main)> cd Sinatra.new
+      (#<Class>)> ls
+      ```
+    - |
+      ```
+      Sinatra::Base.methods:
+        absolute_redirects   environment?       new!                 reload_templates?  static=
+        absolute_redirects=  error              not_found            reset!             static?
+        <...snip...>
+        environment          mustermann_opts?   reload_templates     start!
+        environment=         new                reload_templates=    static
+      #<Class:0x007fb0780c9ad8>.methods: app_file  app_file=  app_file?
+      instance variables:
+        @conditions  @errors  @extensions  @filters  @middleware  @prototype  @routes  @templates
+      class variables: @@mutex
+      locals: _  __  _dir_  _ex_  _file_  _in_  _out_  _pry_
+      ```
+
+- content: |
+    # `?`
+
+    ```
+    (main)> ? Sinatra.new
+
+    From: <...snip...>/.bundle/gems/sinatra-2.0.0/lib/sinatra/base.rb @ line 1963:
+    Owner: #<Class:Sinatra>
+    Visibility: public
+    Signature: new(base=?, &block)
+    Number of lines: 1
+
+    Create a new Sinatra application; the block is evaluated in the class scope.
+    ```
+  notes: |
+    - pry-doc
+
+- |
+    # `$`
+
+    ```
+    (main)> $ Sinatra.new
+
+    From: <...snip...>/.bundle/gems/sinatra-2.0.0/lib/sinatra/base.rb @ line 1964:
+    Owner: #<Class:Sinatra>
+    Visibility: public
+    Number of lines: 5
+
+    def self.new(base = Base, &block)
+      base = Class.new(base)
+      base.class_eval(&block) if block_given?
+      base
+    end
+    ```
+
+- content: '# `_ex_` and `wtf?`'
+  increments:
+    - |
+      ```
+      (main)> def foo
+      (main)|   raise 'omg!'
+      (main)| end
+      => :foo
+      (main)> foo
+      RuntimeError: omg!
+      from (pry):2:in `foo'
+      ```
+    - |
+      ```
+      (main)> _ex_
+      => #<RuntimeError: omg!>
+      ```
+    - |
+      ```
+      (main)> wtf?
+      Exception: RuntimeError: omg!
+      --
+      0: (pry):2:in `foo'
+      1: (pry):4:in `__pry__'
+      <...snip...>
+      ```
+
+- content: '# `whereami`'
+  increments:
+    - |
+      ```console
+      ❯ be ruby foo.rb
+
+      <...snip...>
+
+      ```
+    - |
+      ```
+      (main)> whereami
+
+      From: <...snip...>/foo.rb @ line 5 Object#foo:
+
+          1: def foo
+          2:   raise 'omg!'
+          3: rescue
+          4:   require 'pry'
+       => 5:   binding.pry
+          6: end
+      ```
+
+- content: |
+    # `edit`
+
+    ```
+    (main)> edit
+
+    <...snip...>
+
+    => :foo
+    (main)> edit foo
+
+    <...snip...>
+    ```
+
+- content: '# `.pryrc`'
+  increments:
     - |
       ```ruby
-      begin
-        require 'pry'
-        Pry.start || exit
-      rescue LoadError
+      Pry.config.editor = 'vim'
+
+      ```
+    - |
+      ```ruby
+      def pbcopy(str=nil)
+        str = yield if block_given?
+        IO.popen(%w[pbcopy], 'w') {|io| io.write str }
+      end
+
+      ```
+    - |
+      ```ruby
+      Pry::Commands.command /^$/, "repeat last command" do
+        _pry_.input = StringIO.new(Pry.history.to_a.last)
       end
       ```
-  notes:
 
-- content:
-  notes:
----
-  - Exiting Pry
-    - `exit`
-    - `exit-all`
-    - `exit-program`
-  - Commands I use a lot
-    - `ls`
-    - `;`
-    - `_`
-    - `cd`/`cd ..`
-    - `$`
-    - `?`
-      - `pry-doc`
-    - `_ex_`/`wtf?`
-    - `whereami`
-    - `pry-backtrace`
-    - `edit`
-  - My `.pryrc`
-    - [.pryrc](https://github.com/kejadlen/dotfiles/blob/master/.pryrc)
-  - Commands I use sometimes
-    - `hist`, `hist --replay`
-    - `play`
-  - Plugins
-    - `pry-doc`
-    - `pry-byebug`
-    - `pry-rescue`
-    - `pry-rails`
-    - `pry-remote`
-  - Further info
-    - [Pry site](http://pryrepl.org/)
-    - [Pry wiki (guides)](https://github.com/pry/pry/wiki)
-    - [REPL driven development with Pry](https://www.youtube.com/watch?v=D9j_Mf91M0I)
+- content: '# Other Commands'
+  increments:
+    - |
+      - `hist`
+      - `hist --replay`
+      - `amend-line`
+      - `.(shell command)`
+      - `cat`
+      - `help`
+    - Although honestly, I don't remember to use these most of the time
+
+- content: '# Plugins'
+  increments:
+    - '- `pry-doc`'
+    - |
+      - `pry-byebug`
+        - ```ruby
+          begin
+            require 'pry-byebug'
+            Pry.commands.alias_command 'c', 'continue'
+            Pry.commands.alias_command 's', 'step'
+            Pry.commands.alias_command 'n', 'next'
+            Pry.commands.alias_command 'u', 'finish' # up
+            Pry.commands.alias_command 'b', 'break'
+          rescue LoadError
+          end
+          ```
+    - '- `pry-rescue`'
+    - '- `pry-rails`'
+    - '- `pry-remote`'
+    - |
+
+      I actually don't really use any of these, either
+
+- |
+  # Further Info
+
+  - [Pry site](http://pryrepl.org/)
+  - [Pry wiki](https://github.com/pry/pry/wiki)
+  - [REPL driven development with Pry](https://www.youtube.com/watch?v=D9j_Mf91M0I)
+
+- '# The End'
