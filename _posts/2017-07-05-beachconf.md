@@ -136,5 +136,8 @@ log of what I'm doing on the beach.
 ### July 12
 
 - [Debugging with Xcode 9][debugging-with-xcode]
+  - Yay for wireless debugging and view controllers in Xcode's view hierarchy,
+    although there was a bunch of stuff on SpriteKit and SceneKit that I'm not
+    really interested in.
 
 [debugging-with-xcode]: https://developer.apple.com/videos/play/wwdc2017/404/
