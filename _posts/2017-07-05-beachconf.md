@@ -76,7 +76,7 @@ log of what I'm doing on the beach.
     non-determinism.
   - In-place parallel sorting inside of a pure function.
   - Didn't know that Haskell is still actively evolving.
-- [Bartosz Milewski's Category Theory for
+- Bartosz Milewski's [Category Theory for
   Programmers][category-theory-for-programmers] (book)
   - > [T]esting is almost always a probabilistic rather than a deterministic
     process. Testing is a poor substitute for proof.
@@ -102,3 +102,39 @@ log of what I'm doing on the beach.
 [category-theory-for-programmers]: https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/
 [understanding-computation]: https://www.amazon.com/Understanding-Computation-Machines-Impossible-Programs/dp/1449329276/
 [xcode-signing]: https://developer.apple.com/videos/play/wwdc2017/403/
+
+### July 11
+
+- [Simple Algebraic Data Types][adts] in [Category Theory for
+  Programmers][category-theory-for-programmers] (book)
+  - So I've tried reading this book in the past and have gotten past here, but
+    this is feeling much more understandable now that I've watched some of
+    [Bartosz's lectures on category theory][category-theory-youtube] and read
+    Eugenia Cheng's [How to Bake Pi][bake-pi].
+- `present.rb` (project)
+  - I was volunteered to do a talk on [Pry][pry] for work, so I have started
+    yak shaving by writing a presentation tool that meets my personal
+    requirements. More on this in a later post.
+- Tutoring at [Ada Developers Academy][ada]
+  - The current cohort is working on capstones now, so there was an impressive
+    breadth of technologies that I helped out with:
+    - Getting a Parrot drone onto a WiFi network
+    - Connecting to Intuit using an npm library
+    - Redacting private information that was pushed to GitHub
+    - Using Postgres with SQLAlchemy and Alembic
+  - It's always fascinating to me that I'm still able to contribute despite not
+    being an expert on many of the above areas. In the end, being exposed to
+    similar issues and troubleshooting is a skill that's broadly applicable
+    across all of these different problems.
+
+[adts]: https://bartoszmilewski.com/2015/01/13/simple-algebraic-data-types/
+[category-theory-youtube]: https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
+[bake-pi]: http://eugeniacheng.com/math/books/
+[pry]: http://pryrepl.org/
+[ada]: http://adadevelopersacademy.org/
+
+### July 12
+
+- [Debugging with Xcode 9][debugging-with-xcode]
+
+[debugging-with-xcode]: https://developer.apple.com/videos/play/wwdc2017/404/
