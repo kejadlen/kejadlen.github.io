@@ -1,0 +1,87 @@
+- |
+  # Pry
+
+  ```ruby
+  class Foo
+    def bar
+      puts 'hello world!'
+    end
+  end
+  ```
+-
+  - |
+    # Pry
+
+    ## Slide 2.0
+
+    ```ruby
+    class Foo
+      def bar
+        puts 'hello world!'
+      end
+    end
+    ```
+  - |
+    # Pry
+
+    ## Slide 2.1
+
+    ```ruby
+    class Foo
+      def bar
+        puts 'hello world!'
+      end
+
+      def baz
+        puts 'bye!'
+      end
+    end
+    ```
+---
+- Pry!
+  - Install
+    - `gem install pry`
+    - `gem 'pry'` in the Gemfile `development` group
+  - Running Pry
+    - `binding.pry`
+    - `binding.pry if ...`
+    - `bundle config console pry`
+    - >
+      ```
+      begin
+        require 'pry'
+        Pry.start || exit
+      rescue LoadError
+      end
+      ```
+  - Exiting Pry
+    - `exit`
+    - `exit-all`
+    - `exit-program`
+  - Commands I use a lot
+    - `ls`
+    - `;`
+    - `_`
+    - `cd`/`cd ..`
+    - `$`
+    - `?`
+      - `pry-doc`
+    - `_ex_`/`wtf?`
+    - `whereami`
+    - `pry-backtrace`
+    - `edit`
+  - My `.pryrc`
+    - [.pryrc](https://github.com/kejadlen/dotfiles/blob/master/.pryrc)
+  - Commands I use sometimes
+    - `hist`, `hist --replay`
+    - `play`
+  - Plugins
+    - `pry-doc`
+    - `pry-byebug`
+    - `pry-rescue`
+    - `pry-rails`
+    - `pry-remote`
+  - Further info
+    - [Pry site](http://pryrepl.org/)
+    - [Pry wiki (guides)](https://github.com/pry/pry/wiki)
+    - [REPL driven development with Pry](https://www.youtube.com/watch?v=D9j_Mf91M0I)
