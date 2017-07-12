@@ -8,8 +8,11 @@ class Slide
     case raw
     when String
       new(content: raw)
+    when Hash
+      kwargs = Hash[raw.map {|k,v| [k.to_sym, v] }]
+      new(**kwargs)
     else
-      new(**raw)
+      raise 'Unable to parse presentation'
     end
   end
 
