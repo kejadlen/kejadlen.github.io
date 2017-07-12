@@ -139,5 +139,9 @@ log of what I'm doing on the beach.
   - Yay for wireless debugging and view controllers in Xcode's view hierarchy,
     although there was a bunch of stuff on SpriteKit and SceneKit that I'm not
     really interested in.
+- Pry presentation
+  - Finished the MVP for both the presentation tooling and the presentation
+    itself. With those now done, I have a better idea of how to approach the
+    problem "for real", as it were.
 
 [debugging-with-xcode]: https://developer.apple.com/videos/play/wwdc2017/404/
