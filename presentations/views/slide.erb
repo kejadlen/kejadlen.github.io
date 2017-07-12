@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/syntax.css" rel="stylesheet" type="text/css">
+  <style>
+    body { margin: 0; padding-left: 2em; background-color: #002b36; color: #93a1a1; }
+  </style>
+</head>
+<body>
+  <div id="slide" class="<%= layout %>">
+    <%= doc.to_html %>
+  </div>
+  <script>
+    document.onkeydown = function(e) {
+        e = e || window.event;
+        if(e.key == ' ' || e.key == 'ArrowRight' || e.key == 'ArrowDown') {
+          document.location.href = "<%= n + 1 %>";
+        }
+        if(e.key == 'ArrowLeft' || e.key == 'ArrowUp') {
+          document.location.href = "<%= n - 1 %>";
+        }
+    };
+  </script>
+</body>
+</html>

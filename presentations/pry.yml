@@ -1,18 +1,8 @@
 - |
   # Pry
-
-  ```ruby
-  class Foo
-    def bar
-      puts 'hello world!'
-    end
-  end
-  ```
 -
   - |
-    # Pry
-
-    ## Slide 2.0
+    # Syntax Highlighting
 
     ```ruby
     class Foo
@@ -22,9 +12,7 @@
     end
     ```
   - |
-    # Pry
-
-    ## Slide 2.1
+    # Transitions
 
     ```ruby
     class Foo
@@ -37,6 +25,24 @@
       end
     end
     ```
+- |
+  # Markdown
+
+  ## Headings
+
+  - Foo
+  - Bar
+  - Baz
+
+  ### Moar Headings
+
+  1. Foo
+  1. *Bar*
+  1. **Baz**
+
+  > Blockquote
+
+  `Code`
 ---
 - Pry!
   - Install
