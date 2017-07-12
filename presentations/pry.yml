@@ -1,66 +1,46 @@
 - layout: title
   content: |
     # Pry
--
-  - |
-    # Syntax Highlighting
+
+- content: |
+    # Installation
+
+    ### Global
+
+    ```console
+    $ gem install pry
+    ```
+
+    ### Gemfile
 
     ```ruby
-    class Foo
-      def bar
-        puts 'hello world!'
-      end
+    group :development do
+      gem "pry"
     end
     ```
-  - |
-    # Transitions
+  notes:
+    - "`pry` is the only gem other than `bundler` that I install globally"
 
-    ```ruby
-    class Foo
-      def bar
-        puts 'hello world!'
-      end
-
-      def baz
-        puts 'bye!'
-      end
-    end
-    ```
-- |
-  # Markdown
-
-  ## Headings
-
-  - Foo
-  - Bar
-  - Baz
-
-  ### Moar Headings
-
-  1. Foo
-  1. *Bar*
-  1. **Baz**
-
-  > Blockquote
-
-  `Code`
----
-- Pry!
-  - Install
-    - `gem install pry`
-    - `gem 'pry'` in the Gemfile `development` group
-  - Running Pry
-    - `binding.pry`
-    - `binding.pry if ...`
-    - `bundle config console pry`
-    - >
-      ```
+- content: |
+    # Running Pry
+  increments:
+    - '`require "pry"`'
+    - '`binding.pry`'
+    - '`binding.pry if ...`'
+    - '`bundle console` (`bundle config console pry`)'
+    - |
+      ```ruby
       begin
         require 'pry'
         Pry.start || exit
       rescue LoadError
       end
       ```
+  notes:
+
+- content:
+  notes:
+---
   - Exiting Pry
     - `exit`
     - `exit-all`
