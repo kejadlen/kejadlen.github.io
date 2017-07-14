@@ -143,5 +143,14 @@ log of what I'm doing on the beach.
   - Finished the MVP for both the presentation tooling and the presentation
     itself. With those now done, I have a better idea of how to approach the
     problem "for real", as it were.
+- [Compiling C to printable x86, to make an executable research
+  paper][c-to-x86] (video)
+  - A great video explanation of making an x86 compiler that creates printable
+    executables. Entertaining and educational.
 
 [debugging-with-xcode]: https://developer.apple.com/videos/play/wwdc2017/404/
+[c-to-x86]: https://www.cs.cmu.edu/~tom7/abc/
+
+### July 13
+
+- Facilitated an inception for a new project.
