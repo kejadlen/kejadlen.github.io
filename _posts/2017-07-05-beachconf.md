@@ -154,3 +154,13 @@ log of what I'm doing on the beach.
 ### July 13
 
 - Facilitated an inception for a new project.
+
+### July 14
+
+- [praesent][praesent]
+  - Played around with making this more robust and less of a one-off
+    experiment. Thought about making it more generic or using a Ruby DSL, but
+    in the end, I don't really need that additional complexity and would rather
+    keep it as simple as I can.
+
+[praesent]: https://github.com/kejadlen/kejadlen.github.io/tree/master/presentations
