@@ -32,14 +32,29 @@ directly for the submodule.
 The actual location in my case is a little strange since it's a submodule
 within another submodule, but the main thing you need to know is that the git
 config folder for a submodule is located in the `.git/modules` folder, with the
-same path as in the actual repo. You can see in the path I had to edit that the
-first submodule is at `src/prezto` and the second one at
+same path as in the actual repo. You can see in the path below that the first
+submodule is at `src/prezto` and the second one at
 `modules/prompt/external/agnoster/config`.
 
 `.git/modules/src/prezto/modules/modules/prompt/external/agnoster/config`
 
+Opening this config up revealed the following git remote:
+
+```conf
+[remote "origin"]
+  url = https://gist.github.com/3712874.git
+  fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
 A quick look at the [canonical prezto repo][prezto-repo] showed what the
-`agnoster` remote was supposed to be, and editing the remote in the above git
-config file let me move on with updating my dotfiles submodules.
+`agnoster` remote URL should be:
 
 [prezto-repo]: https://github.com/sorin-ionescu/prezto/tree/master/modules/prompt/external
+
+```conf
+[remote "origin"]
+  url = https://github.com/agnoster/agnoster-zsh-theme.git
+  fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+And with that done, running `git submodule update --checkout` worked.
